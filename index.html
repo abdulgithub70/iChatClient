@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="client.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>iChat - Modern Chat Application</title>
+</head>
+<body>
+    <div class="main">
+        <nav class="navbar">
+            <img class="logo" src="icon.png" alt="Logo">
+            <h1 class="hd">Welcome to iChat 🚀</h1>
+        </nav>
+
+        <div class="container" id="chat-container">
+            <!-- Messages will appear here -->
+        </div>
+
+        <div class="send">
+            <form action="#" id="send-container">
+                <input type="text" name="messageInp" id="messageInp" placeholder="Type a message..." autocomplete="off">
+                <label for="imageInput" class="custom-file-upload">
+                    <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                      <polyline points="17 8 12 3 7 8"/>
+                      <line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
+                  </label>
+                  <input type="file" id="imageInput" accept="image/*" />
+                  
+                <button class="btn" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
