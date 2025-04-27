@@ -1,4 +1,4 @@
-const socket = io('http://localhost:3000')
+const socket = io('https://ichatserver.onrender.com')//'http://localhost:3000'
 
 const form =  document.getElementById('send-container');
 const messageInp = document.getElementById('messageInp')
