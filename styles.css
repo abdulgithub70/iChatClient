@@ -143,7 +143,8 @@ body {
 .container::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-/* Mobile responsive adjustments */
+/* Mobile responsive adjustments */ 
+/* Mobile responsive adjustments */ 
 @media (max-width: 460px) {
     body {
         padding: 0 10px;
@@ -177,15 +178,26 @@ body {
     }
 
     .message {
-        max-width: 80%; /* Allow more space for message width */
-        font-size: 0.9rem; /* Slightly smaller font size for mobile */
+    background-color: #e7f3ff;
+    width: fit-content;
+    max-width: 40%;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 1rem;
+    word-wrap: break-word;
     }
 
-    .left, .right {
-        float: none;
+    .left {
+        float: left;
         clear: both;
         background-color: #f1f0f0;
-        margin: 5px 0;
+    }
+    
+    .right {
+        float: right;
+        clear: both;
+        background-color: #d1e7dd;
     }
 
     .send {
@@ -222,5 +234,44 @@ body {
     .custom-file-upload {
         display: inline-block;
         cursor: pointer;
+    }
+}
+/*Dark mode styles*/
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #ffffff;
+    }
+
+    .navbar {
+        background-color: #1f1f1f;
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+    }
+
+    .container {
+        background-color: #1e1e1e;
+        border: solid 2px #333333;
+    }
+
+    .message {
+        background-color: #2a2a2a;
+        color: #ffffff;
+    }
+
+    .left {
+        background-color: #2a2a2a;
+    }
+
+    .right {
+        background-color: #3a3a3a;
+    }
+
+    .btn {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .btn:hover {
+        background-color: #45a049;
     }
 }

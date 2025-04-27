@@ -6,16 +6,15 @@ const messageContainer = document.querySelector('.container')
 const imageInput = document.getElementById('imageInput');
 var audio = new Audio('ting.mp3')
 
-imageInput.addEventListener('change', (e) => {
+imageInput.addEventListener('change', function(e) {
     const file = e.target.files[0];
     if (file) {
         const reader = new FileReader();
-        reader.onload = function(evt) {
-            const imageData = evt.target.result;
-            socket.emit('send-image', imageData);
-            appendImage(imageData, 'right');
+        reader.onloadend = function() {
+            const base64Image = reader.result;
+            socket.emit('send-image', base64Image); // Emit the image data
         }
-        reader.readAsDataURL(file); // Convert image to base64
+        reader.readAsDataURL(file);
     }
 });
 
