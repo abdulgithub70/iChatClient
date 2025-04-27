@@ -143,3 +143,84 @@ body {
 .container::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+/* Mobile responsive adjustments */
+@media (max-width: 460px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .main {
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .hd {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .container {
+        max-width: 100%;
+        height: 60vh;
+        margin: 10px auto;
+        padding: 10px;
+        box-shadow: none;
+        border: none;
+    }
+
+    .message {
+        max-width: 80%; /* Allow more space for message width */
+        font-size: 0.9rem; /* Slightly smaller font size for mobile */
+    }
+
+    .left, .right {
+        float: none;
+        clear: both;
+        background-color: #f1f0f0;
+        margin: 5px 0;
+    }
+
+    .send {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    #send-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    #messageInp {
+        flex: 1;
+        height: 35px;
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust icon size for image upload */
+    .upload-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .custom-file-upload {
+        display: inline-block;
+        cursor: pointer;
+    }
+}
